@@ -1,0 +1,23 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+
+parameters:
+    locale: en
+    max_records: '100'
+    twitter_auth_token: TkxLN2pSSWNWdEdEcHVuRXg1eGxXVDZ2QTozbUxtcjNsbnpab2pGZ0hEd1dLc1lnVTlqQklPNVlUbVpRZ0xOclBObVVLa1pOTmY4NQ==
+    twitter_post: grant_type=client_credentials
+    twitter_auth_url: https://api.twitter.com/oauth2/token
+    twitter_search_url_format: https://api.twitter.com/1.1/search/tweets.json?result_type=mixed&count=%%s&q=%%s%%s
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    util.twitter:
+        class: AppBundle\Utils\Twitter
+        calls:
+            - [setTwitterAuthUrl, ['%twitter_auth_url%']]
+            - [setTwitterSearchUrlFormat, ['%twitter_search_url_format%']]
+            - [setPostAuthVar, ['%twitter_post%']]
+            - [setAuthToken, ['%twitter_auth_token%']]
+            - [setMaxRecords, ['%max_records%']]

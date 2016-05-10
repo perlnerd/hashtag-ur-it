@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+.float-left {
+	float: left;
+}
+
+.img-padding {
+	margin: 5px;
+}
+
+.tweet-margin {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.bg-2{
+    background-color: rgb(140,130,122);
+    background-color: rgba(140,130,122, 0.8);
+    color: #FFF;
+}
+
+.bg-3{
+    background-color: rgb(13,125,140);
+    background-color: rgba(13,125,140, 0.8);
+    color: #FFF;
+}
+
+.bg-4{
+    background-color: rgb(0,72,92);
+    background-color: rgba(0,72,92, 0.6);
+    color: #FFF;
+}
+.bg-5{
+    background-color: rgb(4,101,143);
+    background-color: rgba(4,101,143, 0.7);
+    color: #FFF;
+}
+
+'140,132,122', '119,187,191', '13,125,140', '0,72,92', '4,101,143'
+
+.tweet {
+   font-size: 16px;
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+body {
+position: absolute; 
+background: url(/images/fsm.png) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+padding-top: 70px;
+}
+
+h4, h3, h1, .navbar-brand {
+   /*
+   font-family: 'Permanent Marker', cursive;
+    */
+    font-family: 'Abril Fatface', cursive;
+}
+
+h4 {
+  color: red;
+}
+
+#refine-form {
+  margin-bottom: 5px;
+}
+
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item {
+  width: 30%;
+  border-radius: 5px;
+  border: 2px solid #FFF;
+ }
+/* 2 columns */
+.grid-item--width2 { 
+  width: 40%;
+}
+.grid-item--height2 { 
+  width: 60%;
+}
+
+
+.navbar-inverse {
+  background-color: rgb(118,197,191);
+  color: #000;
+  border-color: rgb(13,125,140);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color:#FFF;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: rgba(4,101,143,0.4);
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color:#fff;
+    background-color:transparent;
+}
+
+.navbar-inverse .navbar-brand {
+    color:#fff;
+}
+
+a {
+  color: #000;
+}

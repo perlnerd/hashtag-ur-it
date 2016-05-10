@@ -1,0 +1,26 @@
+        {% set bgcolors = [2,3,4,5] %}
+        {% if statuses is empty %}
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 bg-white img-rounded">
+                    <h4>What you are searching for must be important to no one but you.</h4>
+                </div>
+            </div>
+        {% else %}
+            {% set counter = 1 %}
+            {% for status in statuses %}
+                {% set bgcolor = random(bgcolors) %}
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 img-rounded bg-{{ cycle(bgcolors, counter) }} tweet-margin">
+                        <img src="{{ status.avatar }}" class='img-responsive float-left img-padding' />
+                        <strong><a href="https://twitter.com/{{ status.screen_name }}" target="_blank">{{ status.name }}</a></strong> on 
+                        {{ status.date }}<br />
+                        <p class="tweet">{{ status.tweet|raw }}</p>
+                    </div>
+                </div>
+                {% if counter == 5 %}
+                    {% set counter = 1 %}
+                {% else %}
+                    {% set counter = counter + 1 %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
