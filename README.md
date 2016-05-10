@@ -10,13 +10,13 @@ Install:
 
 ### Clone this repo to the location of your choice:
 
-`git clone git@bitbucket.org:clintgilders/bpe-clinton.git`
+`git clone ggit@github.com:perlnerd/hashtag-ur-it.git`
 
 ### Run composer
 
 `cd bpe-clinton && composer install`
 
-  * Serve `bpe-clinton/web` with your [favourite http server](http://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html) OR run the built in web server:
+  * Serve `hashtag-ur-it/web` with your [favourite http server](http://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html) OR run the built in web server:
 
 `php app/console server:run` 
 
