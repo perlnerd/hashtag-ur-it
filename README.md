@@ -16,6 +16,18 @@ Install:
 
 `cd bpe-clinton && composer install`
 
+
+### Add your twitter auth token
+
+See [the twitter API docs](https://dev.twitter.com/oauth/application-only) for info on creating your auth token.
+
+In a nutshell you concatenate your consumer secret and consumer key with a ':', and then base64 encode it.
+
+Add the encoded auth token to app/config/parameters.yml OR app/config/services.yml
+
+
+### Run a webserver and access the app from your web browser.
+
   * Serve `hashtag-ur-it/web` with your [favourite http server](http://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html) OR run the built in web server:
 
 `php app/console server:run` 
